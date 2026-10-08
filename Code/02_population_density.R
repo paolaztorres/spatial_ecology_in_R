@@ -70,6 +70,9 @@ cl <- colorRampPalette(c("blue", "green", "red"))
 plot(densitymap, col=cl)
 
 # Nuances 
+cl10 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(10)
+plot(densitymap, col=cl10)
+
 cl100 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(100)
 plot(densitymap, col=cl100)
 
