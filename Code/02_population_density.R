@@ -1,7 +1,7 @@
 # R code for population density
 
 # Installing packages
-install.packages("spatstat")
+# install.packages("spatstat")
 
 # Using the packages(s)
 library(spatstat)
@@ -61,5 +61,5 @@ plot(elevation)
 plot(densitymap)
 
 # If you get any graphical issue here is your friend: 
-dev.off()
+# dev.off()
 
