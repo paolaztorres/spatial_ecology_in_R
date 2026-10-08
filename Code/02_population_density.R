@@ -68,3 +68,15 @@ cl <- colorRampPalette(c("blue", "green", "red"))
 
 # Plot th density map and change its color thanks to cl
 plot(densitymap, col=cl)
+
+# Nuances 
+cl100 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(100)
+plot(densitymap, col=cl100)
+
+# Exercise: make a multiframe with the map with 10 nuances ontop of that with 100
+par(mfrow=c(2,1))
+plot(densitymap, col=cl10)
+plot(densitymap, col=cl100)
+
+# R colors are here:
+# https://r-charts.com/colors/
