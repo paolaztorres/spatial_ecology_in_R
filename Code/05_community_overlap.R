@@ -44,6 +44,9 @@ densityPlot(macaquetime)
 
 # Overlap the two distributions
 overlapPlot(tigertime, macaquetime)
+/!\ à partir de la ya des erreurs systématiques : "Erreur dans checkInput(A) : 
+  The times of observations must be in a numeric vector."
+
 
 # Changing the graph
 overlapPlot(tigertime, macaquetime, linetype=c(3,1))
