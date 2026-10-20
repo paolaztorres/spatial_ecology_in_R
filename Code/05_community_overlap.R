@@ -38,6 +38,27 @@ head(macaque)
 # Exercise: how to be sure that only macaque species has been selected 
 summary(macaque) # being lazy is beautiful!
 
-# Exercise: 
+# Exercise: make the density plot of the macaque
+macaquetime <- macaque$Timecirc
+densityPlot(macaquetime)
+
+# Overlap the two distributions
+overlapPlot(tigertime, macaquetime)
 
 # Changing the graph
+overlapPlot(tigertime, macaquetime, linetype=c(3,1))
+
+# Changing the line colors
+overlapPlot(tigertime, 
+            macaquetime, 
+            linetype=c(3,1),
+            linecol=c("cyan3", "coral")
+           )
+
+# Changing the overlap color
+overlapPlot(tigertime, 
+            macaquetime, 
+            linetype=c(3,1),
+            linecol=c("cyan3", "coral"),
+            olapcol="deeppink"
+           )
