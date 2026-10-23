@@ -1,1 +1,28 @@
+# Code to develop graphs from species as nodes
+# install.packages("igraph") # run once
+library(igraph)
 
+# The nodes 
+species <- c("Algae", "Zooplankton", "Aphia minuta", "Cyprinus carpio", "Larus")
+
+# Interactions 
+predators <- c("Zooplankton", "Aphia minuta", "Cyprinus carpio", "Larus", "Larus")
+prey <- c("Algae", "Zooplankton", "Aphia minuta", "Aphia minuta", "Cyprinus carpio")
+
+# Exercise: create a dataframe with predators and preys inside 
+interactions <- data.frame(predators, prey)
+
+# Building the graph
+graph <- graph_from_data_frame(interactions, vertices=species) 
+# no need to specify "directed=TRUE" because it is the default
+plot(graph)
+
+# Building the graph without directions 
+graph <- graph_from_data_frame(interactions, vertices=species, directed=FALSE)
+plot(graph)
+
+# The graph will maintain the same interactions but with a different representation
+# The seed!!!
+set.seed(42)
+graph <- graph_from_data_frame(interactions, vertices=species) # directed=TRUE is the default
+plot(graph)
