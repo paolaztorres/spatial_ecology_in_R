@@ -26,7 +26,33 @@ plot(b2, col=inferno(100))
 plot(b3, col=mako(100))
 
 # Exercise: import the red band (n°4)
-b4 <- im.import("sentinel.dolomites.b4.tir")
+b4 <- im.import("sentinel.dolomites.b4.tif")
 plot(b4, col=cividis(100))
 
 # Exercise import the near infrared band
+b8 <- im.import("sentinel.dolomites.b8.tif")
+
+# Build a 4x4 multiframe and plot all of the bands with the default palette 
+im.multiframe(2,2)
+plot(b2)
+plot(b3)
+plot(b4)
+plot(b8)
+
+# multiframe and colorRamp Palette 
+clb <- colorRampPalette(c("blue4", "blue1", "cadetblue1"))(100)
+plot(b2, col=clb)
+
+# Exercise: 
+clg <- colorRampPalette(c("darkolivegreen", "chartreuse4", "chartreuse"))(100)
+plot(b3, col=clg)
+
+# band number 4: red band 
+
+# Stack by the imageRy package:
+
+
+
+# Exercise: starting from the stack called sentinel 
+# terminar o programa com o prgrama do prof 
+
