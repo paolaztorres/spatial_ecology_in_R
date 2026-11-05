@@ -116,3 +116,4 @@ im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
 im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
 im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
 
+# Corrigir o final com objetos designados, erro entre sent e sentinel, problemas com multiframes 
