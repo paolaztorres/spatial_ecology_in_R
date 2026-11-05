@@ -83,6 +83,36 @@ plot(sent, col=mako(100))
 # since the stack was built by: sent <- c(b2, b3, b4, b8)
 plot(sentinel[[4]])
 
-
 # RGB
+# layer 1 = b2 = blue band 
+# layer 2 = b3 = green band
+# layer 3 = b4 = red band
+# layer 4 = b8 = NIR
+
+dev.off()
+# Natural colours image
+im.plotRGB(sent, r=3, g=2, b=1, title="Natural colours image") #pq nao funciona com "sentinel" so "sent"??
+
+# False colours image
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+
+
+
+# making a multiframe with the two RGB images 
+im.multiframe[1,2] # Erreur dans im.multiframe[1, 2] : objet de type 'closure' non indiçable
+# Natural colours image
+im.plotRGB(sent, r=3, g=2, b=1, title="Natural colours image")
+# False colours image
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+
+# Exercise: Put the NIR ontop of the green component of the RGB scheme
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+
+# Making a multiframe with the 4 RGB plots
+im.multiframe[2,2]
+im.plotRGB(sent, r=3, g=2, b=1, title="Natural colours image")
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
+im.plotRGB(sent, r=4, g=3, b=2, title="False colours image")
 
