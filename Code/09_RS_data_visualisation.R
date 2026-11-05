@@ -1,7 +1,9 @@
 # Code for vusualising remote sensing data
 
 # Zenodo set: https://zenodo.org/records/15645465
+# library(remotes)
 # install_github("ducciorocchini/imageRy")
+
 library(imageRy)
 library(terra)
 library(viridis)
@@ -25,6 +27,12 @@ im.multiframe(1,2)
 plot(b2, col=inferno(100))
 plot(b3, col=mako(100))
 
+# Exercise: plot the two bands one on top of the other
+im.multiframe(2,1)
+plot(b2, col=inferno(100))
+plot(b3, col=mako(100))
+# dev.off()
+
 # Exercise: import the red band (n°4)
 b4 <- im.import("sentinel.dolomites.b4.tif")
 plot(b4, col=cividis(100))
@@ -43,16 +51,38 @@ plot(b8)
 clb <- colorRampPalette(c("blue4", "blue1", "cadetblue1"))(100)
 plot(b2, col=clb)
 
-# Exercise: 
+# Exercise: do the same for the b3 - green band 
 clg <- colorRampPalette(c("darkolivegreen", "chartreuse4", "chartreuse"))(100)
 plot(b3, col=clg)
 
 # band number 4: red band 
+clr <- colorRampPalette(c("firebrick4", "firebrick3", "firebrick"))(100)
+plot(b3, col=clr)
+
+# band number 8: NIR band
+cln <- colorRampPalette(c("magenta", "green", "yellow"))(100)
+plot(b8, col=cln)
+
+# Exercise: create a stack of all the bands together with a new object called sent considering the bands as elements of an array
+sent <- c(b2, b3, b4, b8)
+plot(sent)
+plot(sent, col=magma(100))
+
+# Inverting colors
+plot(sent, col=magma(100, direction=-1))
 
 # Stack by the imageRy package:
+sentinel <- im.import("sentinel.dolomites")
+plot(sent, col=mako(100))
+
+# Exercise: starting from the stack called sentinel plot only the NIR band
+# original b2 = layer 1 in the stack
+# original b3 = layer 2 in the stack
+# original b4 = layer 3 in the stack
+# original b8 = layer 4 in the stack
+# since the stack was built by: sent <- c(b2, b3, b4, b8)
+plot(sentinel[[4]])
 
 
-
-# Exercise: starting from the stack called sentinel 
-# terminar o programa com o prgrama do prof 
+# RGB
 
