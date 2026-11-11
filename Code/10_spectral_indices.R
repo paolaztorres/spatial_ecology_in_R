@@ -46,3 +46,6 @@ plot(dvi1992, col=inferno(100))
 # Plotting a single layer
 plot(m1992[[1]])
 # 
+
+
+# Rever toda essa parte sobre como dunciona o NDVI e como calcular 
