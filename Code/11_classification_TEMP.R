@@ -16,3 +16,6 @@ sunclass <- im.classify(sun, num_clusters=3)
 
 # Seed 
 sunclass <- im.classify(sun, num_clusters=3, seed=42)
+
+
+# Refazer a porra da aula toda pq a caralha nao funcionaaaaaaaaaaa
