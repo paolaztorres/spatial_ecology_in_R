@@ -8,41 +8,48 @@ library(spatstat)
 
 # Recall the data
 bei # dataset inside spatstat package
+
 # Looking at the points in space
 plot(bei)
+
 # Changing the pch
 plot(bei, pch=15)
+
 # Decreasing the dimention 
 plot(bei, pch=15, cex=.5)
 
 # Drivers, a dataset with 2 variablesinside bei
 bei.extra
+
 # Plotting variables 
 plot(bei.extra)
 
 # Subsetting a dataset: NEW CONCEPT!
 # There are 2 different methods to make a subset:
 # 1st: name of the variable + $ symbol
-# 2nd: number of the layer + [] for a table, [[]] for map layers 
+# 2nd: number of the layer + [] for tables, [[]] for map layers 
 
-bei.extra #name of the datasel
-elev # name of the variable in bei.extra that we want to keep
-elevation <- bei.extra$elev
+elevation <- bei.extra$elev # bei.extra datase, elev variable in bei.extra that we want to keep
 # output
 elevation 
+
 # Plot elevation 
 plot(elevation)
 
 # Subset by the number of the layer/variable
 elevation2 <- bei.extra[[1]]
+
 # In case bei.extra was a table: bei.extra[1]
+
 # Plot the new object
-plot(elevatio2)
+plot(elevation2)
 
 # Creating our first map!
 densitymap <- density(bei)
+
 # Output 
 densitymap
+
 # Plot the result 
 plot(densitymap)
 
@@ -69,7 +76,14 @@ cl <- colorRampPalette(c("blue", "green", "red"))
 # Plot th density map and change its color thanks to cl
 plot(densitymap, col=cl)
 
-# Nuances 
+# Change colors in our maps
+cl <- colorRampPalette(c("magenta1", "green", "mediumpurple"))
+plot(densitymap, col=cl)
+
+# Nuances
+cl3 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(3)
+plot(densitymap, col=cl3)
+
 cl10 <- colorRampPalette(c("magenta1", "green", "mediumpurple"))(10)
 plot(densitymap, col=cl10)
 
