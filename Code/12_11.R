@@ -16,3 +16,5 @@ Error in utils::download.file(url, path, method = method, quiet = quiet,  :
                               C:\Users\pzane\Downloads
 imageRy-main (1)
                               
+remotes::install_local("C:/Users/pzane/Downloads/imageRy_main.zip")
+library(imageRy)
