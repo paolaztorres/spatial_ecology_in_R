@@ -18,3 +18,5 @@ imageRy-main (1)
                               
 remotes::install_local("C:/Users/pzane/Downloads/imageRy_main.zip")
 library(imageRy)
+
+im.ggplotRGB
