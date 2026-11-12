@@ -84,3 +84,5 @@ p1 + p2
 p1 / p2
 
 # important to save these personal files for the exam 
+# for the exam we will come with our markdown and he will ask questions about our code 
+
