@@ -10,3 +10,5 @@ le package ‘remotes’ a été compilé avec la version R 4.5.3
 Downloading GitHub repo ducciorocchini/imageRy@HEAD
 Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
   le téléchargement de 'https://api.github.com/repos/ducciorocchini/imageRy/tarball/HEAD' a échoué
+
+                              C:\Users\pzane\Downloads
